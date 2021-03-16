@@ -1,0 +1,26 @@
+
+
+
+1.因为没有设置主线程允许操作，所以只能在子线程操作，，
+
+设置主线程可操作的方法：
+ db = Room.databaseBuilder(this, AppDataBase.class, "room-database")
+                //添加数据库变动迁移
+                //.addMigrations(AppDatabase.MIGRATION_1_2)
+                //可在主线程执行，默认不能在主线程执行
+                // .allowMainThreadQueries()
+                .build();
+
+new Thread(new Runnable() {
+            @Override
+            public void run() {
+            //数据库操作
+                gyExpandBeanList = MyApplication.getInstance().getGyExpandDao().getAll();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                //ui操作
+                    }
+                });
+            }
+        }).start();

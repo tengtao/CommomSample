@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+
+        <external-path
+            name="camera_photos"
+            path="" />
+        <!--
+        Context.getExternalFilesDir(null) 的路径
+        path="" 代表可以访问这个目录下面所有文件 -->
+        <external-files-path
+            name="app"
+            path="" />
+
+        <root-path
+            name="root_path"
+            path="." />
+    </paths>
+</resources>

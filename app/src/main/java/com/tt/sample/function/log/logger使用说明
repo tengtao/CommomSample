@@ -1,0 +1,36 @@
+
+
+https://github.com/orhanobut/logger
+
+导入
+implementation 'com.orhanobut:logger:2.2.0'
+
+配置：
+一般在myapplication里面
+private void intiLog() {
+     Logger.addLogAdapter(new AndroidLogAdapter() {
+        @Override
+            public boolean isLoggable(int priority, String tag) {
+                //返回true就是打印
+                return BuildConfig.DEBUG;
+            }
+     });
+}
+保存到本地，默认保存在sd卡下面的logger文件夹，
+Logger.addLogAdapter(new DiskLogAdapter());
+
+使用
+Logger.d("debug");
+Logger.e("error");
+Logger.w("warning");
+Logger.v("verbose");
+Logger.i("information");
+Logger.wtf("What a Terrible Failure");
+
+也可以打印json和xml
+
+格式化打印
+Logger.d("hello %s", "world");
+
+
+

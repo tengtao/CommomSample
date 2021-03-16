@@ -1,0 +1,48 @@
+
+
+1.Application里面初始化
+
+1.1导入
+    //bug检测，腾讯bugly
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+
+1.2
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.tt.learn"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.1"
+        //支持svg
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//
+        // bugly指定支持的so架构
+        ndk {
+            abiFilters 'armeabi'//, 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+    }
+
+1.3集成
+
+    private void intiBugly() {
+        Bugly.init(getApplicationContext(), "29e475447c", false);
+    }
+
+
+1.4检查更新添加，
+参数1：isManual 用户手动点击检查，非用户点击操作请传false
+参数2：isSilence 是否显示弹窗等交互，[true:没有弹窗和toast] [false:有弹窗或toast]
+Beta.checkUpgrade(false,false);
+
+
+
+1.5混淆
+
+为了避免混淆SDK，在Proguard混淆文件中增加以下配置：
+
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}
+-keep class android.support.**{*;}
