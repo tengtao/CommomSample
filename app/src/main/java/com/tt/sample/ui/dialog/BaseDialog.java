@@ -1,4 +1,4 @@
-package com.tt.sample.ui.view;
+package com.tt.sample.ui.dialog;
 
 
 import android.app.Dialog;

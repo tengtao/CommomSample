@@ -52,7 +52,7 @@ public class AppUpdateActivity extends BaseActivity {
 
     //观察ViewModel的数据，且此数据 是 View 直接需要的，不需要再做逻辑处理
     private void observeLivaData() {
-        LiveDataCreateUtils.getLiveData("aaa").observe(this, new Observer<String>() {
+        LiveDataCreateUtils.<String>getLiveData("aaa").observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
                 Logger.d("=======" + s);

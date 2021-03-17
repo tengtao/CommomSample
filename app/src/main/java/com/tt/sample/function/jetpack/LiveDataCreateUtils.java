@@ -1,6 +1,9 @@
 package com.tt.sample.function.jetpack;
 
+import androidx.annotation.NonNull;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 
 import java.util.HashMap;
 
@@ -15,8 +18,8 @@ public class LiveDataCreateUtils {
         hashMapLiveData.put(key, liveData);
     }
 
-    public static MutableLiveData getLiveData(String key) {
-        return hashMapLiveData.get(key);
+    public static <T> MutableLiveData<T> getLiveData(String key) {
+        return (MutableLiveData<T>) hashMapLiveData.get(key);
     }
 
 }

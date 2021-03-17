@@ -1,6 +1,7 @@
 package com.tt.sample.function.devinfo;
 
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -238,7 +239,7 @@ public class DevControlUtils {
                             dummyResultReceiver,
                             true);
                 } catch (NoSuchMethodException e) {
-                    Method startTetheringMethod = internalConnectivityManagerClass.getDeclaredMethod("startTethering",
+                    @SuppressLint("SoonBlockedPrivateApi") Method startTetheringMethod = internalConnectivityManagerClass.getDeclaredMethod("startTethering",
                             int.class,
                             ResultReceiver.class,
                             boolean.class,

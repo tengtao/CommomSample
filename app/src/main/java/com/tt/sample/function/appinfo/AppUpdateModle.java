@@ -3,6 +3,7 @@ package com.tt.sample.function.appinfo;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 
 import com.hjq.permissions.OnPermissionCallback;
@@ -58,7 +59,9 @@ public class AppUpdateModle extends ViewModel {
         loadingLiveData = new MutableLiveData<>();
         appUrlLiveData = new MutableLiveData<>();
         isDownLoadSuccessLiveData = new MutableLiveData<>();
+        //创建
         LiveDataCreateUtils.createLiveData("aaa", String.class);
+        //修改值
         LiveDataCreateUtils.getLiveData("aaa").postValue("dadada");
     }
 

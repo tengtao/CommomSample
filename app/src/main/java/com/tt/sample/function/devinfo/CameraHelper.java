@@ -16,7 +16,7 @@ public class CameraHelper {
      */
     public static boolean isHasBackCamera(Context context) {
         PackageManager pm = context.getPackageManager();
-        return pm.hasSystemFeature(PackageManager.FEATURE_CAMERA);
+        return pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_ANY);
     }
 
     public static boolean isHasFrontCamera(Context context) {

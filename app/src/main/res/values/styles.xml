@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:listDivider">@android:color/holo_red_dark</item>
     </style>
     <!-- 普通弹窗，背景变灰 -->
     <style name="commonDialog" parent="@android:style/Theme.Dialog">
@@ -20,6 +21,23 @@
         <item name="android:windowIsFloating">true</item>
         <!-- 是否背景变暗， -->
         <item name="android:backgroundDimEnabled">true</item>
+        <!-- 设置背景模糊的透明度-->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+
+    <!-- 加载弹窗，背景不变灰 -->
+    <style name="loadDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 背景颜色及透明程度 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 是否没有标题，自定义必须 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否背景模糊 -->
+        <item name="android:backgroundDimEnabled">false</item>
         <!-- 设置背景模糊的透明度-->
         <item name="android:backgroundDimAmount">0.5</item>
     </style>

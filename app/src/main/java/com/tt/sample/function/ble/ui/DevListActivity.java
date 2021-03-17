@@ -25,7 +25,7 @@ import java.util.Locale;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class MainActivity extends BaseBleActivity {
+public class DevListActivity extends BaseBleActivity {
 
     @BindView(R.id.main_rv)
     RecyclerView mainRv;
@@ -44,7 +44,7 @@ public class MainActivity extends BaseBleActivity {
 
     @Override
     public int getLayoutResID() {
-        return R.layout.activity_ble_main;
+        return R.layout.activity_ble_list;
     }
 
     @Override
@@ -114,7 +114,7 @@ public class MainActivity extends BaseBleActivity {
                     public void onDenied(List<String> permissions, boolean never) {
                         if (never) {
                             // 如果是被永久拒绝就跳转到应用权限系统设置页面
-                            XXPermissions.startPermissionActivity(MainActivity.this, permissions);
+                            XXPermissions.startPermissionActivity(DevListActivity.this, permissions);
                         } else {
                             showTipsDialog("获取蓝牙定位权限失败，蓝牙无法使用");
                         }

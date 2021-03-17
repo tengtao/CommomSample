@@ -14,7 +14,7 @@ import com.tt.sample.R;
 /**
  * 相册选择弹窗
  */
-public class SelPhotoDialog extends Dialog implements View.OnClickListener {
+public class SelPhotoDialog extends BaseDialog implements View.OnClickListener {
     public SelItemCallBack selItemCallBack;
 
     private TextView carmar;
