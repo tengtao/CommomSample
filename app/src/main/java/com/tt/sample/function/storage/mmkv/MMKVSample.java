@@ -14,6 +14,8 @@ public class MMKVSample {
      *
      */
     public static void testMMKV() {
+        //初始化
+        MMKV.initialize("mmkv");
         MMKV kv = MMKV.defaultMMKV();
         Logger.d("====" + System.currentTimeMillis());
         for (int i = 0; i < 10000; i++) {

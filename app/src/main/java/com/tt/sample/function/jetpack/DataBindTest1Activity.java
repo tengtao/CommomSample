@@ -1,6 +1,5 @@
 package com.tt.sample.function.jetpack;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +22,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class DataBindTestActivity extends AppCompatActivity {
+public class DataBindTest1Activity extends AppCompatActivity {
 
     @BindView(R.id.btn1)
     Button btn1;
@@ -57,7 +56,6 @@ public class DataBindTestActivity extends AppCompatActivity {
                 mUserListViewModel.getUserInfo();
                 break;
             case R.id.btn2:
-                startActivity(new Intent(DataBindTestActivity.this, DataBindTest1Activity.class));
                 break;
             case R.id.btn3:
                 break;
@@ -77,7 +75,7 @@ public class DataBindTestActivity extends AppCompatActivity {
             @Override
             public void onChanged(List<UserBean> users) {
                 if (users == null) {
-                    Toast.makeText(DataBindTestActivity.this, "获取user失败！", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DataBindTest1Activity.this, "获取user失败！", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 //刷新列表
@@ -88,13 +86,14 @@ public class DataBindTestActivity extends AppCompatActivity {
             @Override
             public void onChanged(Boolean aBoolean) {
                 //显示/隐藏加载进度条
-                progress.setVisibility(aBoolean ? View.VISIBLE : View.INVISIBLE);
+                progress.setVisibility(aBoolean ? View.VISIBLE : View.GONE);
             }
         });
 
 //        //
         StockLiveData.get("symbol").observe(this, price -> {
             // Update the UI.
+            Logger.d("=======11111==>" + price.toString());
             testshow.setText(price.toString());
         });
     }

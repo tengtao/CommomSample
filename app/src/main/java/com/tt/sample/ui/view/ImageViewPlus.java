@@ -2,6 +2,8 @@ package com.tt.sample.ui.view;
 
 /**
  * Created by Administrator on 2017/4/11 0011.
+ * <p>
+ * 圆型头像
  */
 
 import android.content.Context;

@@ -46,14 +46,15 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-
-        <activity android:name=".ui.DelListActivity">
+        <!--        <activity android:name=".ui.DelListActivity">-->
+        <activity android:name=".function.jetpack.DataBindTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".function.jetpack.DataBindTest1Activity" />
         <!--        <activity android:name=".function.appinfo.AppUpdateActivity" />-->
     </application>
 

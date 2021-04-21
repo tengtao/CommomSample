@@ -28,7 +28,7 @@ public class RvTypeAdapter extends BaseMultiItemQuickAdapter<PageBean, BaseViewH
         notifyItemChanged(position, "changeState");
     }
 
-    //艹fuck，
+    //艹fuck，,List<?>居然不能放object只能放问号，艹
     //只刷新单独的一个item
     //https://blog.csdn.net/a1064072510/article/details/82871034
     @Override
