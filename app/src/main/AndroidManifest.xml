@@ -47,7 +47,7 @@
         </provider>
 
         <!--        <activity android:name=".ui.DelListActivity">-->
-        <activity android:name=".function.jetpack.DataBindTestActivity">
+        <activity android:name=".function.storage.MMKVListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -55,6 +55,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".function.jetpack.DataBindTest1Activity" />
+        <!--        <activity android:name=".function.storage.MMKVListActivity" />-->
         <!--        <activity android:name=".function.appinfo.AppUpdateActivity" />-->
     </application>
 

@@ -60,7 +60,7 @@ public class AppUpdateModle extends ViewModel {
         appUrlLiveData = new MutableLiveData<>();
         isDownLoadSuccessLiveData = new MutableLiveData<>();
         //创建
-        LiveDataCreateUtils.createLiveData("aaa", String.class);
+        LiveDataCreateUtils.createLiveData("aaa");
         //修改值
         LiveDataCreateUtils.getLiveData("aaa").postValue("dadada");
     }

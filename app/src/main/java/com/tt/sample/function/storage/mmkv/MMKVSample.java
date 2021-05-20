@@ -3,6 +3,11 @@ package com.tt.sample.function.storage.mmkv;
 
 import com.orhanobut.logger.Logger;
 import com.tencent.mmkv.MMKV;
+import com.tt.sample.utils.TimeUtils;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -14,8 +19,6 @@ public class MMKVSample {
      *
      */
     public static void testMMKV() {
-        //初始化
-        MMKV.initialize("mmkv");
         MMKV kv = MMKV.defaultMMKV();
         Logger.d("====" + System.currentTimeMillis());
         for (int i = 0; i < 10000; i++) {
@@ -45,5 +48,39 @@ public class MMKVSample {
         }
     }
 
+
+    /**
+     *
+     */
+    public static void testAddData() {
+        MMKV kv = MMKV.defaultMMKV();
+        kv.clearAll();
+        for (int i = 0; i < 10000; i++) {
+            String key = "No" + i;
+            String info = "info========" + i;
+            boolean result = kv.encode(key, info);
+//            Logger.d(key + "====" + result);
+        }
+    }
+
+    public static List<String> testGetAllData() {
+        MMKV kv = MMKV.defaultMMKV();
+        String[] key = kv.allKeys();
+        if (key == null) {
+            Logger.d("key.length====null");
+            return null;
+        }
+        Logger.d("key.length====" + key.length);
+        Logger.d("start====" + TimeUtils.getTimes(new Date()));
+        List<String> stringList = new ArrayList<>();
+        for (int i = 0; i < key.length; i++) {
+            String str = kv.decodeString(key[i]);
+//            Logger.d("key====" + key[i]);
+//            Logger.d("info====" + str);
+            stringList.add(str);
+        }
+        Logger.d("end====" + TimeUtils.getTimes(new Date()));
+        return stringList;
+    }
 
 }
