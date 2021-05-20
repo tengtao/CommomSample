@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/pb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/timer_start_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始1" />
+
+        <Button
+            android:id="@+id/timer_stop_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结束1" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/timer_start_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始1" />
+
+        <Button
+            android:id="@+id/timer_stop_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结束1" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/timer_start_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始3" />
+
+        <Button
+            android:id="@+id/timer_stop_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结束3" />
+
+    </LinearLayout>
+</LinearLayout>

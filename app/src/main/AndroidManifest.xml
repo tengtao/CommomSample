@@ -47,7 +47,8 @@
         </provider>
 
         <!--        <activity android:name=".ui.DelListActivity">-->
-        <activity android:name=".function.jetpack.DataBindTestActivity">
+        <!--        <activity android:name=".function.jetpack.DataBindTestActivity">-->
+        <activity android:name=".function.timer.TimerTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
