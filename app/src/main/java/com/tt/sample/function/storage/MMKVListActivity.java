@@ -12,8 +12,10 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.tt.sample.R;
 import com.tt.sample.base.BaseActivity;
+import com.tt.sample.function.log.MyMMKVLog;
 import com.tt.sample.function.storage.mmkv.MMKVSample;
 import com.tt.sample.ui.adapter.DelAdapter;
+import com.tt.sample.ui.dialog.DialogBuillder;
 import com.tt.sample.ui.view.CustomLinearLayoutManager;
 
 import java.util.ArrayList;
@@ -35,6 +37,7 @@ public class MMKVListActivity extends BaseActivity {
     SwipeRefreshLayout delListRefresh;
 
     DelAdapter delAdapter;
+    DialogBuillder dialogBuillder;
 
     @Override
     public int getLayoutResID() {
@@ -43,6 +46,8 @@ public class MMKVListActivity extends BaseActivity {
 
     public void inti() {
         intidelListRv();
+        dialogBuillder = new DialogBuillder();
+
     }
 
     private void intidelListRv() {
@@ -72,11 +77,12 @@ public class MMKVListActivity extends BaseActivity {
         delListRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        List<String> stringList = MMKVSample.testGetAllData();
+                        MyMMKVLog.log("刷新数据", "MMKVListActivity");
+                        List<String> stringList = MyMMKVLog.getLogList();
+                        MyMMKVLog.checkSize();
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {

@@ -8,6 +8,7 @@ import android.os.Handler;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 import com.tencent.mmkv.MMKV;
+import com.tt.sample.function.log.MyMMKVLog;
 import com.tt.sample.function.storage.mmkv.MMKVSample;
 
 import java.util.LinkedList;
@@ -46,7 +47,6 @@ public class MyApplication extends Application {
 
         //初始化
         String rootDir = MMKV.initialize(this);
-        MMKVSample.testAddData();
         Logger.d("=======MMKV.initialize  " + rootDir);
     }
 

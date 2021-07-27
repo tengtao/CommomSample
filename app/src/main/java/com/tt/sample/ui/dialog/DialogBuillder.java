@@ -56,6 +56,7 @@ public class DialogBuillder {
         dialog.setCancelable(true);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setContentView(layout);
+        dialog.show();
         return dialog;
     }
 

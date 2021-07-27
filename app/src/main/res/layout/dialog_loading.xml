@@ -5,15 +5,27 @@
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
         android:layout_centerInParent="true"
-        android:background="@drawable/loading_bg">
+        android:background="@drawable/loading_bg"
+        android:padding="@dimen/dp_10">
 
         <com.tt.sample.ui.view.QMUILoadingView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_5"
+            android:color="@color/white"
             app:qmui_loading_view_size="40dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="加载中..."
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
     </FrameLayout>
 </RelativeLayout>

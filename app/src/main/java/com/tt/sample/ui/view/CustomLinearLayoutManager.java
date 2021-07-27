@@ -4,6 +4,9 @@ import android.content.Context;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+/**
+ * 可以禁止滑动的，一般用来搞横向 viewpage RV
+ */
 public class CustomLinearLayoutManager extends LinearLayoutManager {
     private boolean isScrollEnabled = true;
 

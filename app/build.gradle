@@ -84,4 +84,7 @@ dependencies {
     implementation 'com.facebook.device.yearclass:yearclass:2.1.0'
     //xlog，mkvv，
     implementation 'com.tencent:mmkv:1.0.23'
+
+    //java 和html互相调用
+    implementation 'com.github.lzyzsd:jsbridge:1.0.4'
 }

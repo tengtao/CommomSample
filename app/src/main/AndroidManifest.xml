@@ -47,7 +47,8 @@
         </provider>
 
         <!--        <activity android:name=".ui.DelListActivity">-->
-        <activity android:name=".function.storage.MMKVListActivity">
+        <!--        <activity android:name=".function.storage.MMKVListActivity">-->
+        <activity android:name=".function.webview.WebViewTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
